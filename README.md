@@ -1,5 +1,5 @@
 # JHUDSS03-Getting-and-Cleaning-Data
-Repo for Coursera course Getting and Cleaning Data by Johns Hopkins University\
+Repo for Coursera course Getting and Cleaning Data by Johns Hopkins University
 ## This repo contains the following files:
 * run_analysis.R script
 * ReadMe markdown document
