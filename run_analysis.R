@@ -46,7 +46,7 @@ tail(names(all))
 #2b. Extracts only the measurements on the mean and standard deviation for each measurement
 indices1<-grep("mean",names(all))
 names(all)[indices1]
-indices2<-grep("std()",names(all))
+indices2<-grep("std",names(all))
 names(all)[c(indices1,indices2)]
 #subsetting all columns with mean() and std() and the Y column("activity label")
 all_sub<-all[,c(indices1,indices2,ncol(all)-1,ncol(all))]
