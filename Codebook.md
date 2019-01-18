@@ -36,7 +36,7 @@ fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals, which form the raw data set. 
 
-## The tidy data
+## The output tidy data
 
 Extracts only the measurements on the mean and standard deviation for each measurement.
 
@@ -71,11 +71,13 @@ In the tidy data set, there are 81 variables:
 [13] "tBodyGyroMeanY": body angular velocity mean in Y            
 [14] "tBodyGyroMeanZ": body angular velocity mean in Z            
 [15] "tBodyGyroJerkMeanX": body angular velocity jerk mean in X
+
 [16] "tBodyGyroJerkMeanY": body angular velocity jerk mean in Y   
 [17] "tBodyGyroJerkMeanZ": body angular velocity jerk mean in Z   
 [18] "tBodyAccMagMean": body acceleration magnitude mean         
 [19] "tGravityAccMagMean": gravity acceleration magnitude mean    
 [20] "tBodyAccJerkMagMean": body acceleration jerk magnitude mean 
+
 [21] "tBodyGyroMagMean": body angular velocity magnitude mean            
 [22] "tBodyGyroJerkMagMean": body angular velocity jerk magnitude mean        
 [23] "fBodyAccMeanX": body acceleration mean in X               
@@ -100,10 +102,12 @@ In the tidy data set, there are 81 variables:
 [42] "fBodyAccMagMeanFreq": body acceleration magnitude mean frequency         
 [43] "fBodyBodyAccJerkMagMean": body acceleration jerk magnitude mean     
 [44] "fBodyBodyAccJerkMagMeanFreq": body acceleration jerk magnitude mean frequency
+
 [45] "fBodyBodyGyroMagMean": body angular velocity magnitude mean        
 [46] "fBodyBodyGyroMagMeanFreq": body angular velocity magnitude mean frequency    
 [47] "fBodyBodyGyroJerkMagMean": body angular velocity jerk magnitude mean    
 [48] "fBodyBodyGyroJerkMagMeanFreq": body angular velocity jerk magnitude mean frequency
+
 [49] "tBodyAccStdX": body acceleration standard deviation in X               
 [50] "tBodyAccStdY": body acceleration standard deviation in Y                
 [51] "tBodyAccStdZ": body acceleration standard deviation in Z                
