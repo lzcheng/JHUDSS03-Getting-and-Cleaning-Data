@@ -50,15 +50,12 @@ indices2<-grep("std",names(all))
 names(all)[c(indices1,indices2)]
 #subsetting all columns with mean() and std() and the Y column("activity label")
 all_sub<-all[,c(indices1,indices2,ncol(all)-1,ncol(all))]
-names(all_sub)
 
 #-----------------------------------------------------------
 #3.	Uses descriptive activity names to name the activities in the data set (replacing the numbers in Y column with names of the activities)
 for (i in 1:nrow(activity_labels)){
   all_sub$activity<-sub(i,activity_labels[i,2],all_sub$activity)
 }
-
-table(all_sub$activity)
 
 #--------------------------------------------------------
 #4.	Appropriately labels the data set with descriptive variable names. ( change the column names)
@@ -67,16 +64,9 @@ names(all_sub)
 
 #-----------------------------------------------------------
 #5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-table(all_sub$activity)
-
-table(all_sub$subject)
 table(all_sub$activity,all_sub$subject)
 
 tidyset<-all_sub%>%group_by(subject,activity)%>%summarize_all(mean)
 head(tidyset)
 
 write.table(tidyset, file = "tidyset.txt",row.names = F)
-
-#can check the tidyset using the following command
-checkdata<-read.table("./tidyset.txt",header = T)
-view(checkdata)
