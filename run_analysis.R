@@ -44,7 +44,8 @@ head(names(all))
 tail(names(all))
 
 #2b. Extracts only the measurements on the mean and standard deviation for each measurement
-indices1<-grep("mean()",names(all),ignore.case = T)
+indices1<-grep("mean",names(all))
+names(all)[indices1]
 indices2<-grep("std()",names(all))
 names(all)[c(indices1,indices2)]
 #subsetting all columns with mean() and std() and the Y column("activity label")
@@ -76,4 +77,6 @@ head(tidyset)
 
 write.table(tidyset, file = "tidyset.txt",row.names = F)
 
-#checkdata<-read.table("./tidyset.txt",header = T)
+#can check the tidyset using the following command
+checkdata<-read.table("./tidyset.txt",header = T)
+view(checkdata)
