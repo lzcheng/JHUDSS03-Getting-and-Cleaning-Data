@@ -59,8 +59,11 @@ for (i in 1:nrow(activity_labels)){
 
 #--------------------------------------------------------
 #4.	Appropriately labels the data set with descriptive variable names. ( change the column names)
-#already done in step 2a
-names(all_sub)
+#removing the () and - 
+names(all_sub)<-gsub("\\(\\)", "",names(all_sub))
+names(all_sub)<-gsub("-", "",names(all_sub))
+names(all_sub)<-gsub("mean", "Mean",names(all_sub))
+names(all_sub)<-gsub("std", "Std",names(all_sub))
 
 #-----------------------------------------------------------
 #5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
