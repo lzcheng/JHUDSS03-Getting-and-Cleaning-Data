@@ -48,7 +48,7 @@ indices1<-grep("mean",names(all))
 names(all)[indices1]
 indices2<-grep("std",names(all))
 names(all)[c(indices1,indices2)]
-#subsetting all columns with mean() and std() and the Y column("activity label")
+#subsetting all columns with mean() and std() and the Y column("activity label") and the subject column.
 all_sub<-all[,c(indices1,indices2,ncol(all)-1,ncol(all))]
 
 #-----------------------------------------------------------
@@ -58,8 +58,8 @@ for (i in 1:nrow(activity_labels)){
 }
 
 #--------------------------------------------------------
-#4.	Appropriately labels the data set with descriptive variable names. ( change the column names)
-#removing the () and - 
+#4.	Appropriately labels the data set with descriptive variable names. (change the column names)
+#removing the "()" and "-" in the column names 
 names(all_sub)<-gsub("\\(\\)", "",names(all_sub))
 names(all_sub)<-gsub("-", "",names(all_sub))
 names(all_sub)<-gsub("mean", "Mean",names(all_sub))
