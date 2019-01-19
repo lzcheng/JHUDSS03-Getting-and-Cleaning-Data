@@ -1,7 +1,7 @@
 # JHUDSS03-Getting-and-Cleaning-Data
-* The site where the raw data was obtained:
+* The site where the original data was obtained:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-* The raw data for the project:
+* The original data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## The data collection 
